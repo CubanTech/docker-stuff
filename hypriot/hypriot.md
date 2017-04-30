@@ -1,5 +1,7 @@
 class: split-30 nopadding
-background-image: url( https://cloud.githubusercontent.com/assets/4231611/15031524/7fe67312-1283-11e6-8911-608c0951f217.jpg )
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
 
 .column_t2.center[.vmiddle[
 .fgtransparent[
@@ -13,9 +15,12 @@ background-image: url( https://cloud.githubusercontent.com/assets/4231611/150315
 ### HypriotOS
 # Docker on ARM Boards
 
-### [Eueung Mulyana](https://github.com/eueung)
-### http://eueung.github.io/docker-stuff/hypriot
+### [Olemis Lang](https://github.com/olemis)
+### http://slides.cuban.tech/docker-stuff/hypriot
 #### CodeLabs | [Attribution-ShareAlike CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+
+###### Based on [Eueung Mulyana](https://github.com/eueung) [slides](http://eueung.github.io/docker-stuff/hypriot)
+###### Based on [TheodorosPloumis.com](http://www.theodorosploumis.com/en) [slides](http://theodorosploumis.github.io/docker-presentation)
 #### 
 ]]
 ]]
@@ -27,6 +32,9 @@ class: column_t1 middle
 .tab1.fullwidth[
 | Outline  |
 |:-------------:|
+| Docker Cuba & CubanTech |
+| Intro to Docker |
+| Raspberry Pi vs ODROID |
 | Team Hypriot &amp; HypriotOS |
 | Quick-Start |
 | Let's Get Physical |
@@ -34,7 +42,65 @@ class: column_t1 middle
 
 ---
 class: split-30 nopadding
-background-image: url( https://cloud.githubusercontent.com/assets/4231611/15031524/7fe67312-1283-11e6-8911-608c0951f217.jpg )
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
+
+.column_t2.center[.vmiddle[
+.fgtransparent[
+.figplaint[
+![](images/docker.cuba.png)
+]
+]
+]]
+.column_t2[.vmiddle.nopadding[
+.shadelightdark[.boxtitle1[
+### 
+# Docker Cuba &amp; CubanTech
+
+### 
+### 
+#### 
+#### 
+]]
+]]
+
+---
+class: split-50 nopadding 
+
+.column_t2[.vmiddle.pushfront.right[
+## CubanTech events (so far ...)
+
+![DockerCuba](images/docker.cuba.logo.png)
+
+![PyDay](images/python.logo.png)
+
+![NodeSchool Havana](images/nodeschool.havana.png)
+
+]]
+.column_t1[.vmiddle[
+
+![UNISS](images/uniss.wm.png) ![JCCE](images/jcce.wm.png) 
+
+![UIC](images/uic.wm.png) ![UNAICC](images/unaicc.wm.png)
+
+![GUTL](images/gutl.wm.png)
+
+]]
+
+---
+background-color: #21b7ea
+class: column_t1 center middle
+
+## Where them Cuban Dockers at ?
+
+![CubanTech events](images/cubantech.events.map.png)
+
+---
+class: split-30 nopadding
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
 
 .column_t2.center[.vmiddle[
 .fgtransparent[
@@ -134,7 +200,9 @@ background-image: url(images/complete.jpg)
 
 ---
 class: split-30 nopadding
-background-image: url( https://cloud.githubusercontent.com/assets/4231611/15031524/7fe67312-1283-11e6-8911-608c0951f217.jpg )
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
 
 .column_t2.center[.vmiddle[
 .fgtransparent[
@@ -449,7 +517,9 @@ class: center middle
 
 ---
 class: split-30 nopadding
-background-image: url( https://cloud.githubusercontent.com/assets/4231611/15031524/7fe67312-1283-11e6-8911-608c0951f217.jpg )
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
 
 .column_t2.center[.vmiddle[
 .fgtransparent[
@@ -596,7 +666,9 @@ class: column_t1 middle
 
 ---
 class: split-30 nopadding
-background-image: url( https://cloud.githubusercontent.com/assets/4231611/15031524/7fe67312-1283-11e6-8911-608c0951f217.jpg )
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
 
 .column_t2.center[.vmiddle[
 .fgtransparent[
@@ -629,7 +701,9 @@ background-image: url( https://cloud.githubusercontent.com/assets/4231611/150315
 
 ---
 class: split-30 nopadding
-background-image: url( https://cloud.githubusercontent.com/assets/4231611/15031524/7fe67312-1283-11e6-8911-608c0951f217.jpg )
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
 
 .column_t2.center[.vmiddle[
 .fgtransparent[
@@ -643,9 +717,12 @@ background-image: url( https://cloud.githubusercontent.com/assets/4231611/150315
 ### 
 # END
 
-### [Eueung Mulyana](https://github.com/eueung)
-### http://eueung.github.io/docker-stuff/hypriot
+### [Olemis Lang](https://github.com/olemis)
+### http://slides.cuban.tech/docker-stuff/hypriot
 #### CodeLabs | [Attribution-ShareAlike CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+
+###### Based on [Eueung Mulyana](https://github.com/eueung) [slides](http://eueung.github.io/docker-stuff/hypriot)
+###### Based on [TheodorosPloumis.com](http://www.theodorosploumis.com/en) [slides](http://theodorosploumis.github.io/docker-presentation)
 #### 
 ]]
 ]]
