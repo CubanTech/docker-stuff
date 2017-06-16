@@ -227,7 +227,7 @@ background-position: bottom right
 class: column_t1 center middle
 
 # Let's Try It ...
-### My Case: amd64 Machine, Ubuntu 16.04
+### My Case: darwin Machine, macOS Sierra 10.12.1
 
 ---
 class: split-50 nopadding 
@@ -235,6 +235,9 @@ class: split-50 nopadding
 .column_t2[.vmiddle.pushfront.right[
 ### Step #1
 # Prepare &amp; Flash
+
+MacOS X
+
 
 ]]
 .column_t1[.vmiddle[
@@ -257,6 +260,62 @@ class: split-50 nopadding
 # umount ...
 *# sudo dd if=hypriot.img of=/dev/mmcblk0 bs=1M
 # umount ...
+
+*$ diskutil list
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:                        EFI EFI                     209.7 MB   disk0s1
+   2:          Apple_CoreStorage Macintosh HD            499.4 GB   disk0s2
+   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3
+
+/dev/disk1 (internal, virtual):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                            Macintosh HD           +499.0 GB   disk1
+                                 Logical Volume on disk0s2
+                                 CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCCCC
+                                 Unencrypted
+
+*/dev/disk2 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *7.9 GB     disk2
+   1:                 DOS_FAT_32 NO NAME                 7.9 GB     disk2s1
+```
+]]
+
+---
+
+class: split-50 nopadding 
+
+.column_t2[.vmiddle.pushfront.right[
+### Step #1
+# Prepare &amp; Flash
+
+Ubuntu , Debian, ...
+
+
+]]
+.column_t1[.vmiddle[
+
+```bash
+*$ sudo apt install pv awscli
+*$ sudo apt install nmap
+
+# awscli might not be necessary
+
+*$ wget https://raw.githubusercontent.com/hypriot/flash/master/$(uname -s)/flash
+*$ chmod +x flash
+*$ sudo mv flash /usr/local/bin/flash
+
+*$ flash --hostname node2 hypriot-rpi-20160306-192317.img
+# mmcblk0
+# or flash http://downloads.hypriot.com/hypriot-rpi-20160306-192317.img.zip
+
+# or using dd
+# umount ...
+*# sudo dd if=hypriot.img of=/dev/mmcblk0 bs=1M
+# umount ...
+
 
 *$ lsblk
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
@@ -289,12 +348,12 @@ PING node2.local (192.168.1.100) 56(84) bytes of data.
 64 bytes from 192.168.1.100: icmp_seq=2 ttl=64 time=1.96 ms
 ...
 
-*$ ssh root@node2.local
+*$ ssh pirate@node2.local
 The authenticity of host 'node2.local (192.168.1.100)' can't be established.
 ECDSA key fingerprint is SHA256:tNrdOcXb8tzuEWcC9yJNSP1c51l+7fLJ+QEchAIHA74.
 Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added 'node2.local,192.168.1.100' (ECDSA) to the list of known hosts.
-root@node2.local's password: 
+pirate@node2.local's password: 
 
 The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
@@ -302,10 +361,10 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-HypriotOS: root@node2 in ~
+HypriotOS: pirate@node2 in ~
 $ 
 
-*# Creds: root/hypriot or pi/raspberry
+*# Creds: pirate/hypriot
 
 ```
 
