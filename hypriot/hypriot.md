@@ -253,12 +253,12 @@ MacOS X
 *$ sudo mv flash /usr/local/bin/flash
 
 *$ flash --hostname node2 hypriot-rpi-20160306-192317.img
-# mmcblk0
+# /dev/disk2
 # or flash http://downloads.hypriot.com/hypriot-rpi-20160306-192317.img.zip
 
 # or using dd
 # umount ...
-*# sudo dd if=hypriot.img of=/dev/mmcblk0 bs=1M
+*# sudo dd if=hypriot.img of=/dev/disk2 bs=1M
 # umount ...
 
 *$ diskutil list
