@@ -633,6 +633,27 @@ hypriot/rpi-busybox-httpd   latest              fbd9685c5ffc        10 months ag
 ]]
 
 ---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+
+# Breadboard
+prototyping <br/>
+electrical connections
+
+]]
+.column_t2[.vmiddle[.center[
+
+![Breadboard electrical diagram](images/breadboard-diagram.jpg)
+
+]
+
+- Border columns for ground and VCC
+- Inner rows for circuit connections
+- Have doubts ? Ask !
+
+]]
+---
 class: center middle
 
 .figplaint[
