@@ -82,9 +82,9 @@ class: split-50 nopadding
 
 ![UNISS](images/uniss.wm.png) ![JCCE](images/jcce.wm.png) 
 
-![UIC](images/uic.wm.png) ![UNAICC](images/unaicc.wm.png)
+![UIC](images/uic.wm.png) ![GUTL](images/gutl.wm.png)
 
-![GUTL](images/gutl.wm.png)
+
 
 ]]
 
