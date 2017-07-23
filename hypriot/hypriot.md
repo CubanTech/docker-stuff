@@ -34,11 +34,32 @@ class: column_t1 middle
 |:-------------:|
 | Docker Cuba & CubanTech |
 | Intro to Docker |
-| Raspberry Pi vs ODROID |
 | Team Hypriot &amp; HypriotOS |
+| Raspberry Pi vs ODROID |
 | Quick-Start |
 | Let's Get Physical |
 ]]
+
+---
+class: column_t1 center middle
+
+# WiFi
+
+SSID : cubantech
+
+Password: meet-ups
+
+# Downloads
+
+`http://media.cuban.tech`
+
+`http://qnap01.local`
+
+# Slides
+
+`http://slides.cuban.tech/docker-stuff/hypriot/`
+
+Keep these open so you can move back and forth during the hands-on session.
 
 ---
 class: split-30 nopadding
@@ -95,6 +116,200 @@ class: column_t1 center middle
 ## Where them Cuban Dockers at ?
 
 ![CubanTech events](images/cubantech.events.map.png)
+
+---
+class: split-30 nopadding
+background-color: #17202F
+background-image: url(images/ct.bg.icon.jpg)
+background-position: bottom right
+
+.column_t2.center[.vmiddle[
+.fgtransparent[
+.figplaint[
+![](images/docker.png)
+]
+]
+]]
+.column_t2[.vmiddle.nopadding[
+.shadelightdark[.boxtitle1[
+### 
+# Intro to Docker
+
+### 
+### 
+#### 
+#### 
+]]
+]]
+
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+# Let's see
+
+]]
+.column_t2[.vmiddle[
+
+- ### Who knows about [Docker](http://docker.com)?
+- ### Who uses Docker for development?
+- ### Who uses Docker in production?
+- ### Who tried but could not do it?
+]]
+---
+class: column_t1 center middle
+
+# What is Docker (v17.03)
+
+- ### Docker is an open platform for developing, shipping, and running applications.
+- ### Docker allows you to package an application with all of its dependencies into a standardized unit for software development.
+
+---
+class: column_t1 center middle
+
+# Docker in ICT ecosystem
+
+![Virtualization](http://slides.cuban.tech/img/app.containers.png)
+
+---
+class: column_t1 center middle
+
+# Docker vs VMs
+
+![Docker vs traditional Virtualization](http://slides.cuban.tech/img/vms_vs_containers.jpg)
+
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+# Docker components
+
+]]
+.column_t2[.vmiddle[
+
+- ### (Docker) client
+- ### daemon
+- ### engine
+- ### machine
+- ### compose
+- ### swarm
+- ### registry
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+# Docker client
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+It is the primary user interface to Docker. It accepts commands from the user
+and communicates back and forth with a Docker daemon.
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+# Docker daemon
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+.center[
+![Docker libs](http://slides.cuban.tech/img/docker-langs.small.png)
+]
+
+It runs on a host machine. The user does not directly interact with the daemon,
+but instead through the Docker client with the RESTful api or sockets.
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+# Docker engine
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+A Client with a Daemon as also as the docker-compose tool. Usually referred simply as "docker".
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+
+# Docker machine
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+.center[
+![Docker machine logo](http://slides.cuban.tech/img/docker_machine.png)
+]
+
+A tool which makes it really easy to create Docker hosts on your computer,
+on cloud providers and inside your own data center.
+It creates servers, installs Docker on them, then configures the client to talk to them.
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+
+# Docker compose
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+.center[
+![Docker compose logo](http://slides.cuban.tech/img/docker_compose.png)
+]
+
+A tool for defining and running complex applications with Docker
+(eg a multi-container application) with a single file.
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+
+# Docker swarm
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+.center[
+![Docker swarm logo](http://slides.cuban.tech/img/docker_swarm.png)
+]
+
+A native clustering tool for Docker. Swarm pools together several Docker
+hosts and exposes them as a single virtual Docker host. It scale up to multiple hosts.
+]]
+---
+class: split-30 nopadding 
+
+.column_t1[.vmiddle.pushfront.right[
+
+# Docker distribution
+
+]]
+.column_t2[.vmiddle.fonth4[
+
+.center[
+![Docker distribution logo](http://slides.cuban.tech/img/docker_distribution.png)
+]
+
+A (hosted) service containing repositories of images which responds to the Registry API.
+]]
+---
+class: column_t1 center middle
+
+# The Docker architecture
+
+![Docker architecture](http://slides.cuban.tech/img/architecture.svg)
+
+See more at [Understanding docker](http://docs.docker.com/engine/understanding-docker/)
 
 ---
 class: split-30 nopadding
@@ -199,6 +414,25 @@ background-image: url(images/complete.jpg)
 ## Complete Docker Toolset on ARM
 
 ---
+class: center
+
+## Features - CPU
+
+.fonth4[
+
+|                   | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
+|-------------------|---------------------|---------------------------|----------------------------|
+|                   |                     |                           |                            |
+| **SoC process**       | 40nm                | 28nm                      | 28nm                      |
+| **SoC vendor**        | Broadcom            | Amlogic                   | Samsung                    |
+| **CPU cores**         | 4                   | 4                         | 8                          |
+| **CPU design**        | Cortex A53          | Cortex A53                | Cortex A15/A7              |
+| **CPU frequency**     | 1.2 GHz             | 2 GHz                     | 2.1 GHz                    |
+| **CPU ISA**           | ARMv8               | ARMv8                     | ARMv7                      |
+
+]
+
+---
 class: split-30 nopadding
 background-color: #17202F
 background-image: url(images/ct.bg.icon.jpg)
@@ -252,7 +486,7 @@ MacOS X
 *$ chmod +x flash
 *$ sudo mv flash /usr/local/bin/flash
 
-*$ flash --hostname node2 hypriot-rpi-20160306-192317.img
+*$ flash --hostname rpidocker02 hypriot-rpi-20160306-192317.img
 # /dev/disk2
 # or flash http://downloads.hypriot.com/hypriot-rpi-20160306-192317.img.zip
 
@@ -307,7 +541,7 @@ Ubuntu , Debian, ...
 *$ chmod +x flash
 *$ sudo mv flash /usr/local/bin/flash
 
-*$ flash --hostname node2 hypriot-rpi-20160306-192317.img
+*$ flash --hostname rpidocker02 hypriot-rpi-20160306-192317.img
 # mmcblk0
 # or flash http://downloads.hypriot.com/hypriot-rpi-20160306-192317.img.zip
 
@@ -342,18 +576,18 @@ class: split-50 nopadding
 .column_t2[.vmiddle[
 
 ```bash
-*$ ping node2.local
-PING node2.local (192.168.1.100) 56(84) bytes of data.
+*$ ping rpidocker02.local
+PING rpidocker02.local (192.168.1.100) 56(84) bytes of data.
 64 bytes from 192.168.1.100: icmp_seq=1 ttl=64 time=6.44 ms
 64 bytes from 192.168.1.100: icmp_seq=2 ttl=64 time=1.96 ms
 ...
 
-*$ ssh pirate@node2.local
-The authenticity of host 'node2.local (192.168.1.100)' can't be established.
+*$ ssh pirate@rpidocker02.local
+The authenticity of host 'rpidocker02.local (192.168.1.100)' can't be established.
 ECDSA key fingerprint is SHA256:tNrdOcXb8tzuEWcC9yJNSP1c51l+7fLJ+QEchAIHA74.
 Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'node2.local,192.168.1.100' (ECDSA) to the list of known hosts.
-pirate@node2.local's password: 
+Warning: Permanently added 'rpidocker02.local,192.168.1.100' (ECDSA) to the list of known hosts.
+pirate@rpidocker02.local's password: 
 
 The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
@@ -361,7 +595,7 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-HypriotOS: pirate@node2 in ~
+HypriotOS: pirate@rpidocker02 in ~
 $ 
 
 *# Creds: pirate/hypriot
@@ -381,9 +615,9 @@ class: split-50 nopadding
 .column_t1[.vmiddle[
 
 ```bash
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ hostnamectl
-   Static hostname: node2
+   Static hostname: rpidocker02
          Icon name: computer
            Chassis: n/a
         Machine ID: f2bcb4a318f14a049f7a3618d9c471c8
@@ -480,7 +714,7 @@ Plugins:
 *Architecture: armv7l
 *CPUs: 4
 *Total Memory: 925.5 MiB
-Name: node2
+Name: rpidocker02
 ID: HX6D:ZAUS:RCVC:OA6Y:NTU6:KJ2P:KUIF:BE6Q:ANIX:U3NE:CMDO:TCHX
 Debug mode (server): true
  File Descriptors: 11
@@ -506,7 +740,7 @@ class: split-50 nopadding
 .column_t2[.vmiddle[
 
 ```bash
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker pull hypriot/rpi-busybox-httpd
 
 Using default tag: latest
@@ -518,7 +752,7 @@ a3ed95caeb02: Pull complete
 Digest: sha256:c00342f952d97628bf5dda457d3b409c37df687c859df82b9424f61264f54cd1
 Status: Downloaded newer image for hypriot/rpi-busybox-httpd:latest
 
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker images
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
 hypriot/rpi-swarm           latest              c298de062190        7 weeks ago         13.27 MB
@@ -526,7 +760,7 @@ hypriot/rpi-busybox-httpd   latest              fbd9685c5ffc        10 months ag
 
 *$ docker run -d -p 80:80 hypriot/rpi-busybox-httpd
 eab926d842ab7b334810517fd5e4574683494d1bb82bcf42dabd8c107e7fbc33
-HypriotOS: root@node2 in ~
+HypriotOS: root@rpidocker02 in ~
 
 *$ docker ps
 CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                NAMES
@@ -622,7 +856,7 @@ latest: Pulling from hypriot/rpi-gpio
 Digest: sha256:4055a39a2b68404c0ac9516b5440d103e52eb711b53e78693a532bd820c5c9c1
 Status: Downloaded newer image for hypriot/rpi-gpio:latest
 
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker images
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
 hypriot/rpi-swarm           latest              c298de062190        8 weeks ago         13.27 MB
@@ -671,7 +905,7 @@ class: split-30 nopadding
 .column_t2[.vmiddle[
 
 ```bash
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker run --rm --cap-add SYS_RAWIO --device /dev/mem hypriot/rpi-gpio readall
  +-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
@@ -715,9 +949,9 @@ class: split-30 nopadding
 .column_t2[.vmiddle[
 
 ```bash
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker run --rm --cap-add SYS_RAWIO --device /dev/mem hypriot/rpi-gpio mode 0 OUT
-HypriotOS: root@node2 in ~
+HypriotOS: root@rpidocker02 in ~
 $ docker run --rm --cap-add SYS_RAWIO --device /dev/mem hypriot/rpi-gpio readall
  +-----+-----+---------+------+---+---Pi 2---+---+------+---------+-----+-----+
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
@@ -755,7 +989,7 @@ background-image: url(images/p04.jpg)
 
 ```bash
 
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker run --rm --cap-add SYS_RAWIO --device /dev/mem hypriot/rpi-gpio write 0 on
 
 ```
@@ -765,7 +999,7 @@ background-image: url(images/p03.jpg)
 
 ```bash
 
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker run --rm --cap-add SYS_RAWIO --device /dev/mem hypriot/rpi-gpio write 0 off
 
 ```
@@ -782,7 +1016,7 @@ class: column_t1 middle
 
 ```bash
 
-*HypriotOS: root@node2 in ~
+*HypriotOS: root@rpidocker02 in ~
 *$ docker run --rm --cap-add SYS_RAWIO --device /dev/mem hypriot/rpi-gpio read 1
 
 # wPi GPIO 1 / BCM 18
