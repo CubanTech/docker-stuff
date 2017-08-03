@@ -522,6 +522,30 @@ class: center
 ]
 
 ---
+class: center
+background-image: url(images/sbc-benchmark-netw.png)
+
+## Raspberry Pi v3 vs ODROID C2 - Network
+
+---
+class: center
+background-image: url(images/sbc-benchmark-power.png)
+
+## Raspberry Pi v3 vs ODROID C2 - Power
+
+---
+class: center
+background-image: url(images/sbc-benchmark-storage.png)
+
+## Raspberry Pi v3 vs ODROID C2 - Storage
+
+---
+class: center
+background-image: url(images/sbc-benchmark-drupalpi.png)
+
+## Raspberry Pi v3 vs ODROID C2 - Drupal Pi
+
+---
 class: split-30 nopadding
 background-color: #17202F
 background-image: url(images/ct.bg.icon.jpg)
@@ -650,6 +674,51 @@ sr0          11:0    1  1024M  0 rom
 *mmcblk0     179:0    0  14,9G  0 disk 
   mmcblk0p1 179:1    0    60M  0 part /media/em/boot
   mmcblk0p2 179:2    0  14,9G  0 part /media/em/e6e7f776-...
+```
+
+]]
+
+---
+
+class: split-50 nopadding 
+
+.column_t2[.vmiddle.pushfront.right[
+### Step #1
+# Switch-on
+
+Set hostname
+... needed for ODROID XU4 ...
+
+
+]]
+.column_t1[.vmiddle[
+
+```bash
+$ ping black-pearl.local
+PING black-pearl.local (192.168.2.13): 56 data bytes
+64 bytes from 192.168.2.13: icmp_seq=0 ttl=64 time=0.619 ms
+64 bytes from 192.168.2.13: icmp_seq=1 ttl=64 time=0.716 ms
+$ *ssh pirate@black-pearl.local*
+The authenticity of host 'black-pearl.local (192.168.2.13)' can't be established.
+ECDSA key fingerprint is SHA256:QLpOlZEBqxfIF+Bjcb8GvXaIJOMGLg6xIlmjP0lVFtM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'black-pearl.local' (ECDSA) to the list of known hosts.
+pirate@black-pearl's password:
+
+HypriotOS (Debian GNU/Linux 8)
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+HypriotOS/armv7: pirate@black-pearl in ~
+$ *sudo hostnamectl set-hostname rpidocker02*
+sudo: unable to resolve host black-pearl
+sudo: hostctl: command not found
+HypriotOS/armv7: pirate@black-pearl in ~
+$ *sudo shoutdown -h now*
 ```
 
 ]]
