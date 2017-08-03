@@ -418,17 +418,106 @@ class: center
 
 ## Features - CPU
 
-.fonth4[
+.fonth5[
 
 |                   | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
-|-------------------|---------------------|---------------------------|----------------------------|
-|                   |                     |                           |                            |
-| **SoC process**       | 40nm                | 28nm                      | 28nm                      |
-| **SoC vendor**        | Broadcom            | Amlogic                   | Samsung                    |
-| **CPU cores**         | 4                   | 4                         | 8                          |
-| **CPU design**        | Cortex A53          | Cortex A53                | Cortex A15/A7              |
-| **CPU frequency**     | 1.2 GHz             | 2 GHz                     | 2.1 GHz                    |
-| **CPU ISA**           | ARMv8               | ARMv8                     | ARMv7                      |
+|-------------------|-------------------------|---------------------------|----------------------------|
+|                   |                         |                           |                            |
+| **SoC process**   | 40nm                    | 28nm                      | 28nm                       |
+| **SoC vendor**    | Broadcom                | Amlogic                   | Samsung                    |
+| **CPU cores**     | 4                       | 4                         | 8                          |
+| **CPU design**    | Cortex A53              | Cortex A53                | Cortex A15/A7              |
+| **CPU frequency** | 1.2 GHz                 | 2 GHz                     | 2.1 GHz                    |
+| **CPU ISA**       | ARMv8                   | ARMv8                     | ARMv7                      |
+
+]
+
+---
+class: center
+
+## Features - Media and graphics
+
+.fonth5[
+
+|                   | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
+|-------------------|-------------------------|---------------------------|----------------------------|
+|                   |                         |                           |                            |
+| **GPU vendor**    | Broadcom                | ARM                       | ARM                        |
+| **GPU design**    | VideoCore IV            | 3x Mali 450               | Mali T62B MP6              |
+| **GPU frequency** | 400 MHz                 | 700 MHz                   | 600 MHz                    |
+| **H264 Dec**      | 1080p30                 | 1080p60                   | 1080p60                    |
+| **H264 Enc**      | 1080p30                 | 1080p60                   | 1080p60                    |
+| **H265 Dec**      | None                    | 4K60                      | None                       |
+| **HDMI**          | 1200p60                 | 4K60                      | 1600p60                    |
+
+]
+
+---
+class: center
+
+## Features - Memory and storage
+
+.fonth5[
+
+|                        | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
+|------------------------|-------------------------|---------------------------|----------------------------|
+|                        |                         |                           |                            |
+| **Memory**             | 1GB DDR2                | 2BG DDR3                  | 2BG DDR3                   |
+| **Memory Freq**        | 400 MHz                 | 912 MHz                   | 750 MHz                    |
+| **Storage interface**  | MicroSD                 | MicroSD / eMMC            | MicroSD / eMMC             |
+| **Storage Onboard**    | None                    | None                      | None                       |
+| **Storage technology** | SD 2.0                  | SD 3.0 / eMMC 5.0         | SD 3.0 / eMMC 5.0          |
+| **USB 2.0**            | 4                       | 4 + 1 OTG                 | 1                          |
+| **USB 3.0**            | 0                       | 0                         | 2                          |
+
+]
+
+---
+class: center
+
+## Features - Communications
+
+.fonth5[
+
+|                        | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
+|------------------------|-------------------------|---------------------------|----------------------------|
+|                        |                         |                           |                            |
+| **Ethernet**           | 100 Mbps                | 1 Gbps RTL8211F           | 1 Gbps                     |
+| **Wireless**           | 802.11n BCM43438        | None                      | None                       |
+| **Bluetooth**          | Bluetooth 4.1           | None                      | None                       |
+| **IrDA**               | None                    | Yes                       | None                       |
+| **Real-time clock**    | None                    | None                      | Yes                        |
+
+]
+
+---
+class: center
+
+## Features - Power
+
+.fonth5[
+
+|                        | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
+|------------------------|-------------------------|---------------------------|----------------------------|
+|                        |                         |                           |                            |
+| **Requirements      ** | 5V 2.5A                 | 5V 2A                     | 5V 4A                      |
+| **Power µUSB**        | Yes                     | Yes                       | No                         |
+| **Connector barrel**   | No                      | 2.5 / 0.8 mm              | 5.5 / 2.1 mm               |
+
+]
+
+---
+class: center
+
+## Features - Software
+
+.fonth5[
+
+|                        | ![](images/rpi.png) 3-B | ![](images/odroid.c2.png) | ![](images/odroid.xu4.png) |
+|------------------------|-------------------------|---------------------------|----------------------------|
+|                        |                         |                           |                            |
+| **Android**            | No                      | Yes                       | Yes                        |
+| **Linux Mainland**     | Yes                     | No                        | Yes                        |
 
 ]
 
