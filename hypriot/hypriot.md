@@ -683,8 +683,8 @@ sr0          11:0    1  1024M  0 rom
 class: split-50 nopadding 
 
 .column_t2[.vmiddle.pushfront.right[
-### Step #1
-# Switch-on
+### Step #2
+# Switch-On &amp; Connect
 
 Set hostname
 ... needed for ODROID XU4 ...
